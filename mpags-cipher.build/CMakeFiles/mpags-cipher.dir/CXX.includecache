@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/epp/phrcph/mpags-day-2-p-bhagyashree/mpags-cipher.git/MPAGSCipher/command_line.cpp
+iostream
+-
+string
+-
+vector
+-
+cctype
+-
+command_line.hpp
+/home/epp/phrcph/mpags-day-2-p-bhagyashree/mpags-cipher.git/MPAGSCipher/command_line.hpp
+
+/home/epp/phrcph/mpags-day-2-p-bhagyashree/mpags-cipher.git/MPAGSCipher/command_line.hpp
+string
+-
+vector
+-
+
+/home/epp/phrcph/mpags-day-2-p-bhagyashree/mpags-cipher.git/MPAGSCipher/transformChar.cpp
+string
+-
+cctype
+-
+transformChar.hpp
+/home/epp/phrcph/mpags-day-2-p-bhagyashree/mpags-cipher.git/MPAGSCipher/transformChar.hpp
+
+/home/epp/phrcph/mpags-day-2-p-bhagyashree/mpags-cipher.git/MPAGSCipher/transformChar.hpp
+string
+-
+

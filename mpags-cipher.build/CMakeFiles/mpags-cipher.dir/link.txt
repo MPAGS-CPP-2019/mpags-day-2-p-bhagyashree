@@ -1,0 +1,1 @@
+/cvmfs/sft.cern.ch/lcg/releases/gcc/8.2.0-3fa06/x86_64-centos7/bin/g++  -Wall -Wextra -Werror -Wfatal-errors -Wshadow -pedantic   CMakeFiles/mpags-cipher.dir/mpags-cipher.cpp.o CMakeFiles/mpags-cipher.dir/MPAGSCipher/transformChar.cpp.o CMakeFiles/mpags-cipher.dir/MPAGSCipher/command_line.cpp.o  -o mpags-cipher 
