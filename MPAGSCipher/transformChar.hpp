@@ -6,4 +6,4 @@
 //! Transliterate char to string
 std::string transformChar(const char in_char);
 
-#endif // MPAGSCIPHER_TRANSLITERATE_HPP
+#endif // MPAGSCIPHER_TRANSFORMCHAR_HPP

@@ -9,10 +9,6 @@
 #include "transformChar.hpp"
 #include "command_line.hpp"
 
-std::string transformChar(const char in_char);
-
-bool processCommandLine(const std::vector<std::string>& cmdLineArgs, bool& helpRequested, bool& versionRequested,std::string& inputFile,std::string& outputFile);
-
 // Main function of the mpags-cipher program
 int main(int argc, char* argv[])
 {
@@ -22,11 +18,15 @@ int main(int argc, char* argv[])
   // Options that might be set by the command-line arguments
   bool helpRequested {false};
   bool versionRequested {false};
-  std::string inputFile_name {""};
+  std::string inputFile {""};
   std::string outputFile {""};
 
  
-processCommandLine(cmdLineArgs, helpRequested, versionRequested, inputFile,outputFile);
+  const bool processedOK { processCommandLine(cmdLineArgs, helpRequested, versionRequested, inputFile,outputFile) };
+  if ( ! processedOK ) {
+	  std::cerr << "[error] problem processing command line arguments, cannot continue" << std::endl;
+	  return 1;
+  }
 
   // Handle help, if requested
   if (helpRequested) {
