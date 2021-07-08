@@ -1,13 +1,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cctype>
 #include "command_line.hpp"
 
-bool processCommandLine(const std::vector<std::string>& cmdLineArgs, bool& helpRequested, bool& versionRequested,std::string& inputFile,std::string& outputFile)
+bool processCommandLine(const std::vector<std::string>& cmdLineArgs, bool& helpRequested, bool& versionRequested, std::string& inputFile, std::string& outputFile)
 {
-bool outcome{true};
-
   // Add a typedef that assigns another name for the given type for clarity
   typedef std::vector<std::string>::size_type size_type;
   const size_type nCmdLineArgs {cmdLineArgs.size()};
@@ -28,7 +25,7 @@ bool outcome{true};
       if (i == nCmdLineArgs-1) {
         std::cerr << "[error] -i requires a filename argument" << std::endl;
         // exit main with non-zero return to indicate failure
-        return outcome;
+        return false;
       }
       else {
         // Got filename, so assign value and advance past it
@@ -42,7 +39,7 @@ bool outcome{true};
       if (i == nCmdLineArgs-1) {
         std::cerr << "[error] -o requires a filename argument" << std::endl;
         // exit main with non-zero return to indicate failure
-        return outcome;
+        return false;
       }
       else {
         // Got filename, so assign value and advance past it
@@ -54,8 +51,8 @@ bool outcome{true};
       // Have an unknown flag to output error message and return non-zero
       // exit status to indicate failure
       std::cerr << "[error] unknown argument '" << cmdLineArgs[i] << "'\n";
-      return outcome;
+      return false;
     }
   }
-  return outcome;
+  return true;
 }
